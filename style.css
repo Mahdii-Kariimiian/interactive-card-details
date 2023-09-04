@@ -1,0 +1,249 @@
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+--Lineargradient : hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /* (active input border) */
+--Red : hsl(0, 100%, 66%); /* (input errors) */
+--White: hsl(0, 0%, 100%);
+--Lightgrayishviolet: hsl(270, 3%, 87%);
+--Darkgrayishviolet: hsl(279, 6%, 55%);
+--Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.card-section {
+    position: relative;
+    height: 238px;
+    margin: 0;
+    background-image: url(/images/bg-main-mobile.png);
+    
+}
+
+.front-card {
+    position: absolute;
+    top: 120px;
+    left: 15px;
+    width: 290px;
+    height: 160px;
+    color: white;
+    padding: 20px;
+    background-image: url(/images/bg-card-front.png);
+    background-size: cover;
+    border-radius: 10px;
+    line-height: 1rem;
+}
+
+.logo-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.white-circle {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.empty-circle {
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.card-number {
+    margin-top: 40px;
+    letter-spacing: .2rem;
+    margin-bottom: 5px;
+}
+
+.cvv-number {
+    color: white;
+    position: absolute;
+    right: 38px;
+    top: 63px;
+    letter-spacing: .1rem;
+    font-size: .6rem;
+    font-weight: bold;
+}
+
+.name-date-flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.back-card {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    width: 290px;
+    height: 160px;
+    background-image: url(/images/bg-card-back.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+.form-sec {
+    margin-top: 55px;
+    padding: 20px;
+}
+
+label {
+    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    color: var(--Verydarkviolet);
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid hsl(279, 6%, 80%);
+    padding: 10px;
+}
+
+.exp-cvv-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.half {
+    width: 50%;
+}
+
+.mm-yy-flex {
+    display: flex;
+    gap: 5px;
+}
+
+::placeholder {
+    color: var(--Darkgrayishviolet);
+    font-size: .8rem;
+}
+
+.confirm ,
+.continue-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--Verydarkviolet);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: .1rem;
+    font-weight: 500;
+}
+
+.thanks-sec {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.tahnks-message {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 400;
+}
+
+.details-message {
+    color: var(--Darkgrayishviolet);
+    margin-top: 0;
+}
+
+
+@media (min-width: 376px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        /* border: rgb(14, 246, 134) solid 2px; */
+    }
+
+
+    .card-section {
+        background-image: url(images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-position: contain;
+        /* border: red solid 2px; */
+        width: 33%;
+        max-width: 600px;
+        height: 100vh;
+    }
+
+    .back-card {
+        top: 400px;
+        left: 330px;
+    }
+
+    .front-card {
+        top: 200px;
+        left: 280px;
+    }
+
+    .form-sec {
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .thanks-sec {
+        min-width: 360px;
+        margin: auto;
+        margin-top: 181px;
+    }
+}
+
+/* thanks section */
+
+
+
+
+
+/* alerts */
+
+.hidden {
+    display: none;
+}
+
+.blank {
+    color: var(--Red);
+    font-size: .55rem;
+}
+
+.error-border {
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+
