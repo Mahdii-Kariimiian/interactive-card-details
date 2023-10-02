@@ -7,7 +7,7 @@ link: (https://www.frontendmentor.io/challenges/interactive-card-details-form-Xp
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshot)    
       [Desktop version](#Desktop-version)    
       [Mobile version](#Mobile-version)    
       [Invalid inputs](#Invalid-inputs)    
