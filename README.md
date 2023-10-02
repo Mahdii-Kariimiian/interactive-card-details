@@ -8,6 +8,10 @@ link: (https://www.frontendmentor.io/challenges/interactive-card-details-form-Xp
 
 - [Overview](#overview)
   - [Screenshot](#screenshot)
+      [Desktop version](#Desktop-version)    
+      [Mobile version](#Mobile-version)    
+      [Invalid inputs](#Invalid-inputs)    
+      [Enter Inputs](#Enter-Inputs)   
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -18,6 +22,15 @@ link: (https://www.frontendmentor.io/challenges/interactive-card-details-form-Xp
 This App shows a piece of advice every time the button is clicked
 
 ### Screenshot
+  # Desktop version
+![Desktop version](https://github.com/Mahdii-Kariimiian/interactive-card-details/assets/134393975/4acc3bcd-2144-44d3-9468-84980f9c7634)
+  # Mobile version
+  ![Mobile version](https://github.com/Mahdii-Kariimiian/interactive-card-details/assets/134393975/6b71eda8-1b72-4545-91ed-74bcf02af400)
+  # Invalid inputs
+![Invalid inputs](https://github.com/Mahdii-Kariimiian/interactive-card-details/assets/134393975/9a6b4dc6-94cc-4dda-8146-7333fb8c54e2)
+# Enter Inputs
+![enter Inputs in cards](https://github.com/Mahdii-Kariimiian/interactive-card-details/assets/134393975/a6e22a2d-cd2d-42a0-b283-241264fb877c)
+
 
 
 
