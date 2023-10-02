@@ -2,6 +2,7 @@
 /* CardHolder Name */
 let cardHolder = document.getElementById("cardholder")
 let cardName = document.querySelector(".name")
+// Show default name if Cardholder name input is empty 
 cardHolder.addEventListener ("input" , () => {
     if (cardHolder.value !== "") {
         cardName.innerText = cardHolder.value
@@ -16,13 +17,13 @@ let cardNum = document.querySelector(".card-number")
 let wrongFormat = document.querySelector(".wrong-format")
 cardNumber.addEventListener ("input" , () => {
     let cardNumberValue = cardNumber.value
-    if (isNaN(cardNumberValue)) {
+    if (isNaN(cardNumberValue)) { // enter NaN value
         wrongFormat.classList.remove("hidden")
-    } else if (cardNumber.value !== "") {
+    } else if (cardNumber.value !== "") {  // if number input is empty 
         wrongFormat.classList.add("hidden")
-        cardNum.innerText = cardNumber.value.replace(/\D/g, "").replace(/(\d{4})/g , "$1 ")
+        cardNum.innerText = cardNumber.value.replace(/\D/g, "").replace(/(\d{4})/g , "$1 ") // Seperate number by 4 digits
     } else {
-        wrongFormat.classList.add("hidden")
+        wrongFormat.classList.add("hidden") // Show default number if input is empty
         cardNum.innerText = "0000 0000 0000 0000"
     }
 })
@@ -32,9 +33,15 @@ let month = document.querySelector(".month")
 let expMonth = document.getElementById("Exp-month")
 let monthBlank = document.querySelector (".month-blank")
 expMonth.addEventListener ("input" , () => {
-    if (expMonth.value === "" ) {
+
+    if (expMonth.value === "") { 
         month.innerText = "00"
         monthBlank.classList.remove ("hidden")
+        monthBlank.innerText = "Can't be blank"
+        expMonth.classList.add("error-border")
+    } else if (isNaN(expMonth.value)) {
+        monthBlank.classList.remove ("hidden")
+        monthBlank.innerText = "numbers only"
         expMonth.classList.add("error-border")
     } else {
         monthBlank.classList.add ("hidden")
@@ -51,6 +58,11 @@ expyear.addEventListener ("input" , () => {
     if (expyear.value === "") {
         year.innerText = "00"
         yearBlank.classList.remove ("hidden")
+        yearBlank.innerText = "Can't be blank"
+        expyear.classList.add("error-border")
+    } else if (isNaN(expyear.value)) {
+        yearBlank.classList.remove ("hidden")
+        yearBlank.innerText = "numbers only"
         expyear.classList.add("error-border")
     } else {
         yearBlank.classList.add ("hidden")
@@ -61,18 +73,27 @@ expyear.addEventListener ("input" , () => {
 
 /* CVC */
 let cvc = document.getElementById ("cvv-number")
+let cvcInCard = document.querySelector(".cvv-number")
 let cvcBlank = document.querySelector(".cvv-blank")
 cvc.addEventListener ( "input" , function () {
     if (cvc.value.length > 3) {
         cvcBlank.innerText = "Too long!"
         cvcBlank.classList.remove ("hidden")
+        cvcInCard.innerText = "000"
+    } else if (isNaN(cvc.value)) {
+        cvcBlank.classList.remove ("hidden")
+        cvcBlank.innerText = "numbers only"
+        cvc.classList.add("error-border")
+        cvcInCard.innerText = "000"
     } else if (cvc.value === "") {
         cvcBlank.innerText = "Can't be blank"
-    cvc.classList.add("error-border")
-    cvcBlank.classList.remove ("hidden")
+        cvc.classList.add("error-border")
+        cvcBlank.classList.remove ("hidden")
+        cvcInCard.innerText = "000"
     } else {
         cvcBlank.classList.add ("hidden")
         cvc.classList.remove("error-border")
+        cvcInCard.innerText = cvc.value
     }
 })
 

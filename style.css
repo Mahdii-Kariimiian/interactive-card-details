@@ -29,19 +29,19 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-
+/* Cards */
 .card-section {
     position: relative;
     height: 238px;
     margin: 0;
     background-image: url(/images/bg-main-mobile.png);
-    
+    background-size: cover;
 }
-
+/* front card */
 .front-card {
     position: absolute;
     top: 120px;
-    left: 15px;
+    left: calc(50% - 170px);
     width: 290px;
     height: 160px;
     color: white;
@@ -79,6 +79,26 @@ body {
     margin-bottom: 5px;
 }
 
+.name-date-flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+/* back card */
+.back-card {
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 130px);
+    width: 290px;
+    height: 160px;
+    background-image: url(/images/bg-card-back.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+
 .cvv-number {
     color: white;
     position: absolute;
@@ -89,29 +109,11 @@ body {
     font-weight: bold;
 }
 
-.name-date-flex {
-    display: flex;
-    justify-content: space-between;
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: .05rem;
-}
-
-.back-card {
-    position: absolute;
-    top: 30px;
-    left: 70px;
-    width: 290px;
-    height: 160px;
-    background-image: url(/images/bg-card-back.png);
-    background-size: cover;
-    border-radius: 10px;
-}
-
-
+/* Bank card details */
 .form-sec {
-    margin-top: 55px;
-    padding: 20px;
+    margin: 55px auto;
+    max-width: 600px;
+    padding: 38px 30px;
 }
 
 label {
@@ -164,12 +166,15 @@ input {
     font-weight: 500;
 }
 
+/* Thanks section */
+
 .thanks-sec {
-    margin-top: 46px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    margin: 55px auto;
+    max-width: 600px;
+    padding: 30px;
 }
 
 .tahnks-message {
@@ -184,52 +189,56 @@ input {
 }
 
 
-@media (min-width: 376px) {
+@media (min-width: 900px) {
 
     .container {
         display: flex;
         align-items: center;
-        /* border: rgb(14, 246, 134) solid 2px; */
     }
 
-
     .card-section {
+        position: relative;
         background-image: url(images/bg-main-desktop.png);
         background-repeat: no-repeat;
         background-position: contain;
-        /* border: red solid 2px; */
-        width: 33%;
-        max-width: 600px;
+        width: calc(300px + 10%);
         height: 100vh;
     }
 
-    .back-card {
-        top: 400px;
-        left: 330px;
-    }
-
-    .front-card {
-        top: 200px;
-        left: 280px;
-    }
-
     .form-sec {
-        max-width: 360px;
+        padding: 40px 30px;
+        max-width: 500px;
         margin: auto;
+        box-shadow: 0 2px 20px var(--Darkgrayishviolet);
+        border-radius: 10px;
     }
-
+    
     .thanks-sec {
-        min-width: 360px;
+        min-width: 500px;
         margin: auto;
-        margin-top: 181px;
+        box-shadow: 0 2px 20px var(--Darkgrayishviolet);
+        margin-top: 268px;
+        border-radius: 10px;
+        padding:30px 30px 38px;
     }
 }
 
-/* thanks section */
 
+@media(min-width:1330px) {
 
-
-
+    .back-card {
+        position: absolute;
+        top: 465px;
+        left: 330px;
+    }
+    
+    .front-card {
+        position: absolute;
+        top: 265px;
+        left: 280px;
+    }
+    
+}
 
 /* alerts */
 

@@ -54,12 +54,12 @@
           <label for="Exp-month">Exp. Date (MM/YY)</label>
           <div class="mm-yy-flex">
             <div>
-              <input type="number" min="1" max="12" name="Exp-month" id="Exp-month" placeholder="MM">
+              <input type="text" inputmode="numeric" min="1" max="12" name="Exp-month" id="Exp-month" placeholder="MM">
               <p class="blank month-blank hidden">Can't be blank</p>
             </div>
             <label for="Exp-year"></label>
             <div>
-              <input type="number" max="99" name="Exp-year" id="Exp-year" placeholder="YY">
+              <input type="text" inputmode="numeric" max="99" name="Exp-year" id="Exp-year" placeholder="YY">
               <p class="blank year-blank hidden">Can't be blank</p>
             </div>
           </div>
@@ -67,7 +67,7 @@
 
         <div class="half">
           <label for="cvv-number">CVC</label>
-          <input type="number" name="cvv-number" id="cvv-number" placeholder="e.g. 123">
+          <input type="text" inputmode="numeric" name="cvv-number" id="cvv-number" placeholder="e.g. 123">
           <p class="blank cvv-blank hidden">Can't be blank</p>
         </div>
 
